@@ -1,2 +1,0 @@
-# API-TESTING-WITH-POSTMAN
-intership

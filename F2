@@ -1,0 +1,20 @@
+import requests
+
+# API endpoint
+url = "https://jsonplaceholder.typicode.com/posts/1"
+
+# Send GET request
+response = requests.get(url)
+
+# Check status code
+assert response.status_code == 200, f"Expected 200 but got {response.status_code}"
+
+# Parse JSON response
+data = response.json()
+
+# Assertions to validate response
+assert "userId" in data, "userId not found in response"
+assert "title" in data and data["title"], "Title is missing or empty"
+
+# Print success message
+print("✅ API te
